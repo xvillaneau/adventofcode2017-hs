@@ -6,6 +6,7 @@ import qualified Aoc17.Tools as Tools
 import Aoc17.Day1
 import Aoc17.Day2
 import Aoc17.Day3
+import Aoc17.Day4
 
 dayFromFile :: Show b => Int -> (String -> a) -> (a -> b) -> (a -> b) -> IO ()
 dayFromFile n reader step1 step2 = do
@@ -27,3 +28,4 @@ main = do
   dayFromFile 1 Tools.readDigits day1Captcha day1Captcha2
   dayFromFile 2 Tools.readNumberGrid day2SubChecksum day2DivChecksum
   dayFromData 3 368078 day3Step1 day3Step2
+  dayFromFile 4 lines day4Step1 day4Step2
